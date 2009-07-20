@@ -1,0 +1,10 @@
+This repository contains my solutions to the problems found at Project
+Euler (http://projecteuler.net/).
+
+I've had several goals for this project:
+  - multiple languages
+  - rake management
+  - automatic generation of code (when starting a new problem)
+
+I blog about my solutions on my blog:
+  http://jdfrens.blogspot.com/search/label/project%20euler
