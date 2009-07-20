@@ -1,0 +1,7 @@
+["..", "../../rake"].map { |d| $:.unshift File.join(File.dirname(__FILE__), d) }
+require 'rake/clean'
+require 'common_defs'
+require 'problem_defs'
+require 'ruby_defs'
+require 'common_tasks'
+require 'ruby_tasks'

@@ -1,0 +1,9 @@
+require 'rake/clean'
+
+desc "Run the Prolog-lib tests"
+task :test do
+  FileList['*.plt'].each do |library|
+    sh "chmod 755 #{library}"
+    sh "#{library}"
+  end
+end

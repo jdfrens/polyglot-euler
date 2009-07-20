@@ -1,0 +1,18 @@
+def dirs
+  ["prolog"]
+end
+
+desc "Runs all of the library tests"
+task :test do
+  failures = []
+  dirs.each do |dir|
+    sh "cd #{dir} ; rake test" do |ok, result|
+      if ! ok
+        failures = failures + [dir]
+      end
+    end
+  end
+  if ! failures.empty?
+    raise "Test failures: #{failures.join(', ')}"
+  end
+end

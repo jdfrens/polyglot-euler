@@ -1,0 +1,29 @@
+Haskel
+------
+  CamelCase
+  Assertion: assertEqual "GPF of 2" 2 (greatestPrimeFactor 2)
+  Functions:
+    maximum :: List a -> a
+
+Erlang
+------
+  CamelCase or _ --- my choice?
+  Assertion: ?_assertEqual(2, greatest_prime_factor(2))
+
+Python
+------
+  CamelCase for classes; underscores for variables, functions, methods
+  Assertions:
+    self.assertEqual(2, gpf(2))
+    self.assertTrue(is_palindrome(9))
+    
+Prolog
+------
+  underscores
+  assertions:
+    test(greatest_prime_factor1) :-
+	  greatest_prime_factor1(2, 2).
+  integer -> string:
+    name(300, S)
+  string -> integer:
+    name(X, "foobar")

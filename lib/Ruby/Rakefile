@@ -1,0 +1,10 @@
+require 'rubygems'
+require 'rake/clean'
+require 'spec/rake/spectask'
+
+desc "Ruby library tests"
+task :test => :spec
+
+Spec::Rake::SpecTask.new do |t|
+  t.spec_files = FileList['*_spec.rb']
+end
