@@ -1,3 +1,3 @@
 def command_args
-  [665]  # TODO: supply command arguments
+  [20]
 end
