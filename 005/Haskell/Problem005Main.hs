@@ -6,7 +6,7 @@ import System.Exit
 
 import Problem005
 
-main = getArgs >>= putAnswers . (map computation) . parse {- TODO: use Haskell computation -}
+main = getArgs >>= putAnswers . (map smallest_multiple) . parse
 
 parse args     = map read args
 

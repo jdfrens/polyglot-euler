@@ -4,10 +4,14 @@ import Test.HUnit
 import System
 import Problem005
 
-{- TODO: change the Haskell computation name -}
-computation_tests = TestList [
-  {- TODO: write some decent Haskell tests -}
-  TestCase (assertFailure "write some decent tests!")
+smallest_multiple_tests = TestList [
+    TestCase (   1 @=? smallest_multiple  1)
+  , TestCase (   2 @=? smallest_multiple  2)
+  , TestCase (   6 @=? smallest_multiple  3)
+  , TestCase (  12 @=? smallest_multiple  4)
+  , TestCase (  60 @=? smallest_multiple  5)
+  , TestCase (  60 @=? smallest_multiple  6)
+  , TestCase (2520 @=? smallest_multiple 10)
   ]
 
 checkTests counts = case counts of
@@ -16,4 +20,4 @@ checkTests counts = case counts of
 		then exitFailure
 		else (exitWith ExitSuccess)
 
-main = runTestTT (TestLabel "testing computation" computation_tests)  >>= checkTests
+main = runTestTT (TestLabel "testing smallest multiple" smallest_multiple_tests)  >>= checkTests
