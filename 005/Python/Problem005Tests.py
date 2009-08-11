@@ -6,8 +6,13 @@ import problem005
 
 class Problem005Tests(unittest.TestCase):
 
-    # TODO: write Python tests
     def testComputation(self):
-        self.fail("write a useful Python test")
+        self.assertEqual(   1, problem005.smallest_multiple( 1))
+        self.assertEqual(   2, problem005.smallest_multiple( 2))
+        self.assertEqual(   6, problem005.smallest_multiple( 3))
+        self.assertEqual(  12, problem005.smallest_multiple( 4))
+        self.assertEqual(  60, problem005.smallest_multiple( 5))
+        self.assertEqual(  60, problem005.smallest_multiple( 6))
+        self.assertEqual(2520, problem005.smallest_multiple(10))
 
 unittest.main()

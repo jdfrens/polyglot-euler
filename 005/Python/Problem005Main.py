@@ -4,5 +4,4 @@ import sys
 
 import problem005
 
-# TODO: use Python computation
-print problem005.computation(int(sys.argv[1]))
+print problem005.smallest_multiple(int(sys.argv[1]))
