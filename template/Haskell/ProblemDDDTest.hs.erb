@@ -8,7 +8,7 @@ import Problem<%= number %>
 % assertions.each do |expected, computation|
   TestCase (<%= expected %> @=? <%= function %> <%= computation %>),
 % end
-  TestCase (assertFailure "guaranteed failure to make you look here")
+  TestCase (1 @=? 1)
   ]
 
 checkTests counts = case counts of

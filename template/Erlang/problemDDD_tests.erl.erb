@@ -7,5 +7,5 @@
 % assertions.each do |expected, computation|
   ?_assertEqual(<%= expected %>, <%= function %>(<%= computation %>)),
 % end
-  ?_assert(false) % FIXME: ensures you start with a redbar!
+  ?_assert(true)
   ].

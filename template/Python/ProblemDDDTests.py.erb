@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+import unittest
+
+import problem<%= number %>
+
+class Problem<%= number %>Tests(unittest.TestCase):
+
+    def testComputation(self):
+% assertions.each do |expected, computation|
+        self.assertEquals(<%= expected %>, problem<%= number %>.<%= function %>(<%= computation %>))
+% end
+
+unittest.main()
