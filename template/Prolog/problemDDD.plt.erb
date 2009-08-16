@@ -1,0 +1,13 @@
+#!/usr/bin/env swipl -q -t go -s
+
+go :- 
+	consult(problem<%= number %>),
+	run_tests.
+
+:- begin_tests(problem<%= number %>).
+
+% assertions.each do |expected, computation|
+test(<%= function %>) :- <%= function %>(<%= computation %>, <%= expected %>).
+% end
+
+:- end_tests(problem<%= number %>).
