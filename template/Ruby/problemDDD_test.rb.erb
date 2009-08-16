@@ -1,0 +1,13 @@
+require "test/unit"
+
+require "problem<%= number %>"
+
+class TestProblemDDD < Test::Unit::TestCase
+
+  def test_<%= function %>
+% assertions.each do |expected, computation|
+    assert_equal <%= expected %>, <%= computation %>.<%= function %>
+% end
+  end
+  
+end

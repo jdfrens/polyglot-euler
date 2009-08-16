@@ -1,0 +1,14 @@
+require "problem<%= number %>"
+
+describe Integer do
+
+  describe "<%= function %>" do
+  
+% assertions.each do |expected, computation|
+    it "should compute <%= expected %> when given <%= computation %>" do
+      <%= computation %>.<%= function %>.should == <%= expected %>
+    end
+  
+% end
+  end
+end
