@@ -1,0 +1,20 @@
+module Main where
+
+import Test.HUnit
+import System
+import Problem<%= number %>
+
+<%= function %>Tests = TestList [
+% assertions.each do |expected, computation|
+  TestCase (<%= expected %> @=? <%= function %> <%= computation %>),
+% end
+  TestCase (assertFailure "guaranteed failure to make you look here")
+  ]
+
+checkTests counts = case counts of
+	Counts _ _ errors failures ->
+		if (errors + failures > 0)
+		then exitFailure
+		else (exitWith ExitSuccess)
+
+main = runTestTT (TestLabel "testing <%= function %>" <%= function %>Tests)  >>= checkTests
