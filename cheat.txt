@@ -1,14 +1,28 @@
 Haskel
 ------
   CamelCase
-  Assertion: assertEqual "GPF of 2" 2 (greatestPrimeFactor 2)
+  -- comment
+  Assertion:
+    assertEqual "GPF of 2" 2 (greatestPrimeFactor 2)
+    2 @=? greatestPrimeFactor 2
+  Notation:
+    Range of numbers: [x..y]
+  Important modules:
+    Data.List
   Functions:
     maximum :: List a -> a
 
 Erlang
 ------
   CamelCase or _ --- my choice?
-  Assertion: ?_assertEqual(2, greatest_prime_factor(2))
+  % comment
+  Assertion:
+    ?_assertEqual(2, greatest_prime_factor(2))
+  Important modules:
+    lists
+  Functions:
+    lists:seq(X, Y)       % range of integers
+    lists:maximum(A, B)
 
 Python
 ------

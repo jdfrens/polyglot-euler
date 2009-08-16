@@ -1,4 +1,5 @@
 require 'find'
+require 'erb'
 
 desc "Creates a new folder for a new project"
 task :create, :number do |task, args|
@@ -11,13 +12,22 @@ task :create, :number do |task, args|
         Dir.mkdir("#{dest}")
         next
       end
+    elsif path =~ /\.erb$/
+      process_erb(path, dest, args.number)
     else
-      code = File.read(path)
-      code = code.gsub("DDD", args.number)
       File.open("#{dest}", "w") do |file|
-        file.write(code)
+        file.write(File.read(path).gsub("DDD", args.number))
       end
     end
+  end
+end
+
+def process_erb(path, dest, number)
+  target = ENV['target']
+  function = ENV['function']
+  assertions = eval(ENV['assertions'])
+  File.open("#{dest}".gsub(".erb", ""), "w") do |file|
+    file.write(ERB.new(File.read(path), nil, "%<>").result(binding))
   end
 end
 
