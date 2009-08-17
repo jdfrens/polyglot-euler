@@ -40,6 +40,12 @@ def process_erb(path, dest, number)
   end
 end
 
+class String
+  def camel_case
+    gsub(/_\w/) { |s| s.gsub("_", "").upcase }
+  end
+end
+
 class ProjectTemplate
   def initialize(number)
     @number = number

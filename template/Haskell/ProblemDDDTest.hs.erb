@@ -5,9 +5,9 @@ import System
 import Problem<%= number %>
 
 % functions.each do |function|
-<%= function %>Tests = TestList [
+<%= function.camel_case %>Tests = TestList [
 % tests(function).each do |expected, computation|
-  TestCase (<%= expected %> @=? <%= function %> <%= computation %>),
+  TestCase (<%= expected %> @=? <%= function.camel_case %> <%= computation %>),
 % end
   TestCase (1 @=? 1)
   ]
@@ -15,7 +15,7 @@ import Problem<%= number %>
 %end
 tests = TestList [
 % functions.each do |function|
-	TestLabel "testing <%= function %>" <%= function %>Tests,
+	TestLabel "testing <%= function.camel_case %>" <%= function.camel_case %>Tests,
 % end
 	TestCase (1 @=? 1)
 	]

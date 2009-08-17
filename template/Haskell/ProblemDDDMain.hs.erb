@@ -6,7 +6,7 @@ import System.Exit
 
 import Problem<%= number %>
 
-main = getArgs >>= putAnswers . (map <%= problem_function %>) . parse
+main = getArgs >>= putAnswers . (map <%= problem_function.camel_case %>) . parse
   where
     parse args     = map read args
     putAnswers l   = putStr $ unlines $ map show l

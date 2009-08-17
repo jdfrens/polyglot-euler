@@ -1,7 +1,7 @@
-module Problem<%= number %> (<%= functions.join(", ") %>) where
+module Problem<%= number %> (<%= functions.map {|f| f.camel_case}.join(", ") %>) where
 
-<%= problem_function %> :: Integer -> Integer
+<%= problem_function.camel_case %> :: Integer -> Integer
 % functions.each do |function|
-<%= function %> n = 3
+<%= function.camel_case %> n = 3
 
 % end
