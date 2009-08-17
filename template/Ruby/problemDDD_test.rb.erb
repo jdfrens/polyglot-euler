@@ -2,12 +2,12 @@ require "test/unit"
 
 require "problem<%= number %>"
 
-class TestProblemDDD < Test::Unit::TestCase
+class TestProblem<%= number %> < Test::Unit::TestCase
 
 % functions.each do |function|
   def test_<%= function %>
 % tests(function).each do |expected, computation|
-    assert_equal <%= expected %>, <%= computation %>.<%= problem_function %>
+    assert_equal <%= expected %>, <%= computation %>.<%= function %>
 % end
   end
   
