@@ -1,0 +1,11 @@
+["..", "../../rake"].map { |d| $:.unshift File.join(File.dirname(__FILE__), d) }
+require 'rake/clean'
+require 'common_defs'
+require 'problem_defs'
+require 'erlang_defs'
+require 'common_tasks'
+require 'erlang_tasks'
+
+def command_args
+  ["these arguments are ignored"]
+end

@@ -1,0 +1,2 @@
+["../rake"].map { |d| $:.unshift File.join(File.dirname(__FILE__), d) }
+require 'problem_tasks'
