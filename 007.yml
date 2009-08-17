@@ -1,0 +1,24 @@
+problem:
+  function: nth_prime
+  value: 1001
+functions:
+  nth_prime:
+    tests:
+      one:
+        expected: 2
+        value: 1
+      two:
+        expected: 3
+        value: 2
+      three:
+        expected: 5
+        value: 3
+      four:
+        expected: 7
+        value: 4
+      five:
+        expected: 11
+        value: 5
+      six:
+        expected: 13
+        value: 6
