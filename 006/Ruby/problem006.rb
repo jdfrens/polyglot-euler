@@ -1,13 +1,16 @@
 class Integer
 
   def diff_squares_sums
-    3
+    square_of_sum - sum_of_squares
   end
+
   def sum_of_squares
-    3
+    self * (self + 1) * (2 * self + 1) / 6
   end
+
   def square_of_sum
-    3
+    sum = self * (self + 1) / 2
+    sum * sum
   end
 
 end

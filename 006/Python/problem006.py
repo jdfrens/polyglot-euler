@@ -1,9 +1,10 @@
 def diff_squares_sums(n):
-    return 3
+    return square_of_sum(n) - sum_of_squares(n)
     
 def sum_of_squares(n):
-    return 3
+    return n * (n + 1) * (2 * n + 1) / 6
     
 def square_of_sum(n):
-    return 3
+    sum = n * (n + 1) / 2
+    return sum * sum
     
