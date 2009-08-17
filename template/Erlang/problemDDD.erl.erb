@@ -1,5 +1,7 @@
--module(problem<%= number %>). 
--export([<%= function %>/1]).
+-module(problem<%= number %>).
+-export([<%= functions.map {|f| "#{f}/1"}.join(", ") %>]).
 
-%% TODO: define Erlang version of <%= function %>
+% functions.each do |function|
 <%= function %>(N) -> 3.
+
+% end

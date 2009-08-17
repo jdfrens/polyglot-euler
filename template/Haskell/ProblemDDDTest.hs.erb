@@ -4,17 +4,26 @@ import Test.HUnit
 import System
 import Problem<%= number %>
 
+% functions.each do |function|
 <%= function %>Tests = TestList [
-% assertions.each do |expected, computation|
+% tests(function).each do |expected, computation|
   TestCase (<%= expected %> @=? <%= function %> <%= computation %>),
 % end
   TestCase (1 @=? 1)
   ]
-
-checkTests counts = case counts of
-	Counts _ _ errors failures ->
-		if (errors + failures > 0)
-		then exitFailure
-		else (exitWith ExitSuccess)
-
-main = runTestTT (TestLabel "testing <%= function %>" <%= function %>Tests)  >>= checkTests
+  
+%end
+tests = TestList [
+% functions.each do |function|
+	TestLabel "testing <%= function %>" <%= function %>Tests,
+% end
+	TestCase (1 @=? 1)
+	]
+	
+main = runTestTT tests >>= checkTests
+  where
+    checkTests counts = case counts of
+    	Counts _ _ errors failures ->
+    		if (errors + failures > 0)
+    		then exitFailure
+    		else (exitWith ExitSuccess)

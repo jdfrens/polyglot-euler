@@ -2,13 +2,16 @@ require "problem<%= number %>"
 
 describe Integer do
 
+% functions.each do |function|
   describe "<%= function %>" do
   
-% assertions.each do |expected, computation|
+% tests(function).each do |expected, computation|
     it "should compute <%= expected %> when given <%= computation %>" do
-      <%= computation %>.<%= function %>.should == <%= expected %>
+      <%= computation %>.<%= problem_function %>.should == <%= expected %>
     end
   
 % end
   end
+  
+%end
 end

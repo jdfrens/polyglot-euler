@@ -9,7 +9,7 @@ go :-
 go([Arg]) :-
 	atom_chars(Arg, String),
 	name(N, String),
-	<%= function %>(N, Answer),
+	<%= problem_function %>(N, Answer),
 	write_canonical(Answer), nl,
 	halt.
 

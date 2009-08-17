@@ -6,8 +6,11 @@ go :-
 
 :- begin_tests(problem<%= number %>).
 
-% assertions.each do |expected, computation|
+% functions.each do |function|
+% tests(function).each do |expected, computation|
 test(<%= function %>) :- <%= function %>(<%= computation %>, <%= expected %>).
+% end
+
 % end
 
 :- end_tests(problem<%= number %>).

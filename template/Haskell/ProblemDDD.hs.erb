@@ -1,5 +1,7 @@
-module Problem<%= number %> (<%= function %>) where
+module Problem<%= number %> (<%= functions.join(", ") %>) where
 
-{- TODO: write Haskell version of <%= function %> -}
-<%= function %> :: Integer -> Integer
+<%= problem_function %> :: Integer -> Integer
+% functions.each do |function|
 <%= function %> n = 3
+
+% end

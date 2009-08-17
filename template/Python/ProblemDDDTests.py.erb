@@ -6,9 +6,11 @@ import problem<%= number %>
 
 class Problem<%= number %>Tests(unittest.TestCase):
 
-    def testComputation(self):
-% assertions.each do |expected, computation|
+% functions.each do |function|
+    def test<%= function %>(self):
+% tests(function).each do |expected, computation|
         self.assertEquals(<%= expected %>, problem<%= number %>.<%= function %>(<%= computation %>))
 % end
 
+% end
 unittest.main()

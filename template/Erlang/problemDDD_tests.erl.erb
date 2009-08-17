@@ -1,11 +1,14 @@
 -module(problem<%= number %>_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(problem<%= number %>, [<%= function %>/1]).
+-import(problem<%= number %>).
 
+% functions.each do |function|
 <%= function %>_test_() -> [
-% assertions.each do |expected, computation|
-  ?_assertEqual(<%= expected %>, <%= function %>(<%= computation %>)),
+% tests(function).each do |expected, computation|
+  ?_assertEqual(<%= expected %>, problem<%= number %>:<%= function %>(<%= computation %>)),
 % end
   ?_assert(true)
   ].
+
+% end
