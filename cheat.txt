@@ -23,6 +23,8 @@ Erlang
   Functions:
     lists:seq(X, Y)       % range of integers
     lists:maximum(A, B)
+    div                   % for integer division
+    rem                   % for remainder
 
 Python
 ------
