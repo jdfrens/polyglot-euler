@@ -1,0 +1,15 @@
+problem:
+  function: pythagorean_triplet
+  value: 1000
+functions:
+  pythagorean_triplet:
+    tests:
+      three_four_five:
+        expected: 60
+        value: 12
+      six_eight_ten:
+        expected: 480
+        value: 24
+      biggie:
+        expected: 453960
+        value: 234
