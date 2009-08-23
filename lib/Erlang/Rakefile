@@ -1,0 +1,15 @@
+require 'rake/clean'
+
+SRC = FileList['*.erl']
+TESTS = FileList['*_tests.erl']
+CLEAN.include('*.beam')
+
+desc "Run the Erlang-lib tests"
+task :test do
+  SRC.each do |src|
+    sh "erlc #{src}"
+  end
+  TESTS.each do |test|
+    sh "erl -noshell -s #{test.gsub(".erl", "")} test -s init stop"
+  end
+end
