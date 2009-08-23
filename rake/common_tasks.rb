@@ -1,7 +1,7 @@
 desc "Compiles everything and runs tests"
 task :default => :test
 
-desc "Runs the tests (after compiling)"
+desc "Runs the tests"
 task :test => :compile do
   chmod_test
   sh test_executable
