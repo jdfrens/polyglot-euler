@@ -1,7 +1,11 @@
+$LOAD_PATH << "../../lib/Ruby"
+
+require "primes"
+
 class Integer
 
   def sum_of_primes_below
-    3
+    Integer.primes(:less_than => self).inject(0) { |sum, n| sum + n }
   end
 
 end
