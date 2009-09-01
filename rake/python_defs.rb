@@ -17,3 +17,4 @@ end
 SRC = FileList['*.py']
 
 CLEAN.include('*.pyc')
+ENV['PYTHONPATH'] = ".:../../lib/Python"
