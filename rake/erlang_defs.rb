@@ -1,9 +1,9 @@
 def test_executable
-  "erl -noshell -s problem#{problem_number}_tests test -s init stop"
+  "erl -pa ../../lib/Erlang -noshell -s problem#{problem_number}_tests test -s init stop"
 end
 
 def main_executable
-  "erl -noshell -s problem#{problem_number}_main main"
+  "erl -pa ../../lib/Erlang -noshell -s problem#{problem_number}_main main"
 end
 
 def compilation_targets

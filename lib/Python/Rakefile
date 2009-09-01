@@ -1,0 +1,12 @@
+require 'rake/clean'
+
+SRC = FileList['*.py']
+TESTS = FileList['*_tests.py']
+
+desc "Run the Python-lib tests"
+task :test do
+  TESTS.each do |test|
+    File.chmod(0700, test)
+    sh test
+  end
+end

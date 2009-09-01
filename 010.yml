@@ -1,0 +1,24 @@
+problem:
+  function: sum_of_primes_below
+  value: 2000000
+functions:
+  sum_of_primes_below:
+    tests:
+      one:
+        expected: 0
+        value: 1
+      two:
+        expected: 2
+        value: 2
+      three:
+        expected: 5
+        value: 3
+      four:
+        expected: 5
+        value: 4
+      five:
+        expected: 10
+        value: 5
+      ten:
+        expected: 17
+        value: 10
