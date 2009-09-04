@@ -2,9 +2,10 @@ module Main where
 
 import Test.HUnit
 import System
-import Primes
 
-list_of_prime_tests = TestList [
+import Numbers
+
+list_of_primes_tests = TestList [
   TestCase (assertEqual "first prime" [2] (take 1 primes)),
   TestCase (assertEqual "first two primes" [2, 3] (take 2 primes)),
   TestCase (assertEqual "primes less than 9"
@@ -30,5 +31,6 @@ checkTests counts = case counts of
 		else (exitWith ExitSuccess)
 
 main = runTestTT (
-        TestLabel "testing prime stuff" list_of_prime_tests
+        TestLabel "testing prime stuff" list_of_primes_tests,
+        TestLabel "testing prime factorizations" prime_factorization_tests
        ) >>= checkTests

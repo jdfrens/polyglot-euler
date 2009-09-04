@@ -1,4 +1,4 @@
-module Primes (primes, primeFactors) where
+module Numbers (primes, primeFactors) where
 
 primes :: [Integer]
 primes = sieve [2..]
