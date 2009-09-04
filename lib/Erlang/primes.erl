@@ -1,7 +1,8 @@
 -module(primes).
--export([primes_up_to/1]).
+-export([primes_up_to/1, factors/1]).
 
--import(lists, [any/2, reverse/1]).
+-import(lists, [any/2, reverse/1, seq/2]).
+-import(math, [sqrt/1]).
 
 primes_up_to(N) -> reverse(primes_up_to(N, 2, [])).
 
@@ -13,3 +14,10 @@ primes_up_to(N, I, Primes) ->
   end.
   
 is_prime(I, Primes) -> not any(fun(P) -> I rem P == 0 end, Primes).
+
+factors(1) -> [1];
+factors(N) -> 
+  IsDivisor = fun(F) -> N rem F == 0 end,
+  LowFactors = lists:filter(IsDivisor, seq(1, round(sqrt(N)))),
+  HighFactors = lists:map(fun(F) -> N div F end, LowFactors),
+  lists:append(LowFactors, lists:reverse(HighFactors)).
