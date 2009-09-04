@@ -19,4 +19,17 @@ describe Integer do
     21.factors.should == [1, 3, 7, 21]
     28.factors.should == [1, 2, 4, 7, 14, 28]
   end
+  
+  it "should compute triangle numbers" do
+    1.triangle_number.should == 1
+    2.triangle_number.should == 3
+    3.triangle_number.should == 6
+    4.triangle_number.should == 10
+    5.triangle_number.should == 15
+    6.triangle_number.should == 21
+    7.triangle_number.should == 28
+    8.triangle_number.should == 36
+    9.triangle_number.should == 45
+    10.triangle_number.should == 55
+  end
 end

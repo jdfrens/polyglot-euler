@@ -13,6 +13,10 @@ class Integer
       low_factors + high_factors
     end
   end
+  
+  def triangle_number
+    (1..self).to_a.inject(0) { |sum, n| sum + n }
+  end
 end
 
 class PrimeGenerator
