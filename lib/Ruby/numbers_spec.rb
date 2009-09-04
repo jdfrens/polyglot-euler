@@ -1,4 +1,4 @@
-require 'primes'
+require 'numbers'
 require 'spec'
 
 describe Integer do
