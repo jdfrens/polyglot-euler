@@ -1,7 +1,7 @@
 -module(numbers_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(numbers, [primes_up_to/1, factors/1]).
+-import(numbers, [primes_up_to/1, factors/1, triangle_number/1]).
 
 primes_up_to_test_() -> [
   ?_assertEqual([2], primes_up_to(2)),
@@ -20,4 +20,17 @@ factors_test_() -> [
   ?_assertEqual([1, 3, 5, 15], factors(15)),
   ?_assertEqual([1, 3, 7, 21], factors(21)),
   ?_assertEqual([1, 2, 4, 7, 14, 28], factors(28))
+  ].
+
+triangle_number_test_() -> [
+  ?_assertEqual(1, triangle_number(1)),
+  ?_assertEqual(3, triangle_number(2)), 
+  ?_assertEqual(6, triangle_number(3)),
+  ?_assertEqual(10, triangle_number(4)),
+  ?_assertEqual(15, triangle_number(5)),
+  ?_assertEqual(21, triangle_number(6)),
+  ?_assertEqual(28, triangle_number(7)),
+  ?_assertEqual(36, triangle_number(8)),
+  ?_assertEqual(45, triangle_number(9)),
+  ?_assertEqual(55, triangle_number(10))
   ].

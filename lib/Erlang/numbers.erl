@@ -1,5 +1,5 @@
 -module(numbers).
--export([primes_up_to/1, factors/1]).
+-export([primes_up_to/1, factors/1, triangle_number/1]).
 
 -import(lists, [any/2, reverse/1, seq/2]).
 -import(math, [sqrt/1]).
@@ -22,3 +22,5 @@ factors(N) ->
   LowFactors = lists:filter(IsDivisor, seq(1, round(sqrt(N)))),
   HighFactors = lists:map(OtherFactor, LowFactors),
   lists:append(LowFactors, lists:reverse(HighFactors)).
+
+triangle_number(N) -> lists:sum(seq(1, N)).
