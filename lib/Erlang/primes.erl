@@ -18,6 +18,7 @@ is_prime(I, Primes) -> not any(fun(P) -> I rem P == 0 end, Primes).
 factors(1) -> [1];
 factors(N) -> 
   IsDivisor = fun(F) -> N rem F == 0 end,
+  OtherFactor = fun(F) -> N div F end,
   LowFactors = lists:filter(IsDivisor, seq(1, round(sqrt(N)))),
-  HighFactors = lists:map(fun(F) -> N div F end, LowFactors),
+  HighFactors = lists:map(OtherFactor, LowFactors),
   lists:append(LowFactors, lists:reverse(HighFactors)).
