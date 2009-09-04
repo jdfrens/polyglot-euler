@@ -1,4 +1,4 @@
-import primes
+import numbers
 
 def sum_of_primes_below(n):
-    return sum(primes.primes_up_to(n))
+    return sum(numbers.primes_up_to(n))
