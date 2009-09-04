@@ -1,4 +1,4 @@
--module(primes).
+-module(numbers).
 -export([primes_up_to/1, factors/1]).
 
 -import(lists, [any/2, reverse/1, seq/2]).

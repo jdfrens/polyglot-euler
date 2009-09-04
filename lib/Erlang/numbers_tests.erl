@@ -1,7 +1,7 @@
--module(primes_tests).
+-module(numbers_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(primes, [primes_up_to/1, factors/1]).
+-import(numbers, [primes_up_to/1, factors/1]).
 
 primes_up_to_test_() -> [
   ?_assertEqual([2], primes_up_to(2)),
