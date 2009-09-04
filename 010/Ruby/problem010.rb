@@ -1,6 +1,6 @@
 $LOAD_PATH << "../../lib/Ruby"
 
-require "primes"
+require "numbers"
 
 class Integer
 
