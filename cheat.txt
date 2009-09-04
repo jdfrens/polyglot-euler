@@ -32,6 +32,8 @@ Python
   Assertions:
     self.assertEqual(2, gpf(2))
     self.assertTrue(is_palindrome(9))
+  Functions:
+    range(n, m)       % range of integers
     
 Prolog
 ------

@@ -1,7 +1,7 @@
 require 'pathname'
   
 def dirs
-  ["Erlang", "Haskell", "Python", "Ruby"].select do |dir|
+  ["Erlang", "Haskell", "Prolog", "Python", "Ruby"].select do |dir|
     Pathname.new(dir).directory?
   end
 end
