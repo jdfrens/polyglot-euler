@@ -2,10 +2,10 @@ require 'rake/clean'
 
 desc "Run the Haskell-lib tests"
 task :test do
-  sh "ghc --make PrimesTest"
-  sh "PrimesTest"
+  sh "ghc --make NumbersTest"
+  sh "NumbersTest"
 end
 
 SRC = FileList['*.hs']
 CLEAN.include('*.hi', '*.o')
-CLOBBER.include("PrimesTest")
+CLOBBER.include("NumbersTest")

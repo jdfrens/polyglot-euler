@@ -30,7 +30,9 @@ checkTests counts = case counts of
 		then exitFailure
 		else (exitWith ExitSuccess)
 
-main = runTestTT (
+main = do
+  tests <- runTestTT (TestList [
         TestLabel "testing prime stuff" list_of_primes_tests,
-        TestLabel "testing prime factorizations" prime_factorization_tests
-       ) >>= checkTests
+        TestLabel "testing prime factorizations" prime_factorization_tests]
+       )
+  checkTests tests
