@@ -16,7 +16,7 @@ def is_prime(i, primes):
 def factors(n):
     if n == 1:
         return [1]
-    LowFactors = filter(lambda a: n % a == 0, range(1, round(math.sqrt(n))+1))
+    LowFactors = filter(lambda a: n % a == 0, range(1, int(math.sqrt(n))+1))
     HighFactors = map(lambda a: n / a, LowFactors)
     return LowFactors + HighFactors[::-1]
     
