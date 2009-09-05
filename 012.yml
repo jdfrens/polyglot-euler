@@ -1,0 +1,24 @@
+problem:
+  function: problem012
+  value: 500
+functions:
+  problem012:
+    tests:
+      one:
+        expected: 1
+        value: 1
+      two:
+        expected: 3
+        value: 2
+      three:
+        expected: 6
+        value: 3
+      four:
+        expected: 6
+        value: 4
+      five:
+        expected: 28
+        value: 5
+      six:
+        expected: 28
+        value: 6
