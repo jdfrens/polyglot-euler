@@ -1,4 +1,4 @@
-module Numbers (primes, primeFactors) where
+module Numbers (primes, primeFactors, factors, triangleNumber) where
 
 primes :: [Integer]
 primes = sieve [2..]
@@ -11,3 +11,7 @@ primeFactors n = go n primes
       | p*p > n        = [n]
       | n `rem` p == 0 = p : go (n `quot` p) ps
       | otherwise      = go n pt
+
+factors n = filter (\i -> n `mod` i == 0) [1..n]
+
+triangleNumber n = sum [1..n]
