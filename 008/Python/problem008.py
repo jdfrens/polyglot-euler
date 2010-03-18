@@ -14,5 +14,5 @@ def listify(n):
     list = []
     while n > 0:
         list = [n % 10] + list
-        n /= 10
+        n //= 10
     return list
