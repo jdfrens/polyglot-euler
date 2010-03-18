@@ -4,4 +4,4 @@ import sys
 
 import problem012
 
-print problem012.problem012(int(sys.argv[1]))
+print(problem012.problem012(int(sys.argv[1])))

@@ -4,4 +4,4 @@ import sys
 
 import problem009
 
-print problem009.pythagorean_triplet(int(sys.argv[1]))
+print(problem009.pythagorean_triplet(int(sys.argv[1])))
