@@ -19,8 +19,15 @@ task :test do
       end
     end
   end
-  if ! failures.empty?
-    raise "Test failures: #{failures.join(', ')}"
+  if failures.empty?
+    puts "***********************"
+    puts "All tests for all languages (#{dirs.join(", ")}) passed!"
+    puts "***********************"
+  else
+    puts "***********************"
+    puts "Test failures: #{failures.join(', ')}"
+    puts "***********************"
+    fail "Test failures."
   end
 end
 

@@ -27,6 +27,8 @@ class PrimesTests(unittest.TestCase):
         self.assertEqual([1, 3, 7, 21], numbers.factors(21))
         self.assertEqual([1, 2, 4, 7, 14, 28], numbers.factors(28))
       
+class TriangleTests(unittest.TestCase):
+    
     def test_triangle_number(self):
         self.assertEqual(1, numbers.triangle_number(1))
         self.assertEqual(3, numbers.triangle_number(2)) 
@@ -38,5 +40,13 @@ class PrimesTests(unittest.TestCase):
         self.assertEqual(36, numbers.triangle_number(8))
         self.assertEqual(45, numbers.triangle_number(9))
         self.assertEqual(55, numbers.triangle_number(10))
+
+class ReversedIntegerTests(unittest.TestCase):
+    
+    def test_reversed_integer(self):
+        self.assertEqual(1, numbers.reverse(1))
+        self.assertEqual(7, numbers.reverse(7))
+        self.assertEqual(21, numbers.reverse(12))
+        self.assertEqual(12345, numbers.reverse(54321))
         
 unittest.main()

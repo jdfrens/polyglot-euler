@@ -1,7 +1,6 @@
 h1. Polyglot Euler
 
-This repository contains my solutions to the problems found at Project
-Euler (http://projecteuler.net/).
+This repository contains my solutions to the problems found at Project Euler (http://projecteuler.net/).
 
 I've had several goals for this project:
   - multiple languages
@@ -27,9 +26,7 @@ Software:
 
 h2. My Lib Folder
 
-The lib folder contains libraries of helper functions that have been useful in
-multiple problems. Sometime I handle the load path in my code, other times I
-use a configuration file or environment variable.
+The lib folder contains libraries of helper functions that have been useful in multiple problems. Sometime I handle the load path in my code, other times I use a configuration file or environment variable.
 
 h3. Prolog
 
