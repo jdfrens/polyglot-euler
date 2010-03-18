@@ -13,17 +13,17 @@ I blog about my solutions on "my blog":http://jdfrens.blogspot.com/search/label/
 h2. My System
 
 My MacBook:
-  - Mac OS X 10.5.6
-  - 2 GHz Intel Core 2 Duo
-  - 4 GB 667 MHz DDR2 SDRAM
+* Mac OS X 10.5.6
+* 2 GHz Intel Core 2 Duo
+* 4 GB 667 MHz DDR2 SDRAM
 
 Software:
-  - MacPorts version 1.7 (which provides the languages below)
-  - Official Erlang version R13B
-  - Glasgow Haskell Compiler version 6.10.4 (64-bit)
-  - SWI-Prolog version 5.8.3
-  - Official Python version 3.1.1
-  - Official Ruby (MRI) version 1.8.7
+* MacPorts version 1.7 (which provides the languages below)
+* Official Erlang version R13B
+* Glasgow Haskell Compiler version 6.10.4 (64-bit)
+* SWI-Prolog version 5.8.3
+* Official Python version 3.1.1
+* Official Ruby (MRI) version 1.8.7
 
 h2. My Lib Folder
 
