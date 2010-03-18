@@ -1,0 +1,40 @@
+h1. Polyglot Euler
+
+This repository contains my solutions to the problems found at Project
+Euler (http://projecteuler.net/).
+
+I've had several goals for this project:
+  - multiple languages
+  - rake management
+  - automatic generation of code (when starting a new problem)
+
+I blog about my solutions on "my blog":http://jdfrens.blogspot.com/search/label/project%20euler
+
+h2. My System
+
+My MacBook:
+  - Mac OS X 10.5.6
+  - 2 GHz Intel Core 2 Duo
+  - 4 GB 667 MHz DDR2 SDRAM
+
+Software:
+  - MacPorts version 1.7 (which provides the languages below)
+  - Official Erlang version R13B
+  - Glasgow Haskell Compiler version 6.10.4 (64-bit)
+  - SWI-Prolog version 5.8.3
+  - Official Python version 3.1.1
+  - Official Ruby (MRI) version 1.8.7
+
+h2. My Lib Folder
+
+The lib folder contains libraries of helper functions that have been useful in
+multiple problems. Sometime I handle the load path in my code, other times I
+use a configuration file or environment variable.
+
+h3. Prolog
+
+In an <code>~/.plrc</code> file, I have this line:
+
+pre. :- assert(library_directory('/Users/jdfrens/Projects/polyglot-euler/lib/prolog')).
+
+Tweak the prefix up to the <code>/lib/prolog</code>.
