@@ -15,11 +15,13 @@ task :sample => :compile do
   end
 end
 
-desc "Times the main command-line program"
-task :timed_sample => :compile do
-  chmod_main
-  command_args.each do |args|
-    sh "time #{main_executable} #{args}"
+namespace :sample do
+  desc "Times the main command-line program"
+  task :timed => :compile do
+    chmod_main
+    command_args.each do |args|
+      sh "time #{main_executable} #{args}"
+    end
   end
 end
 
