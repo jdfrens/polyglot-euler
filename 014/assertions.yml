@@ -1,0 +1,54 @@
+problem:
+  function: maximum_collatz_under
+  value: 1000000
+functions:
+  maximum_collatz_under:
+    tests:
+      one:
+        expected: 1
+        value: 1
+      two:
+        expected: 2
+        value: 2
+      three:
+        expected: 3
+        value: 3
+      four:
+        expected: 3
+        value: 4
+      seven:
+        expected: 7
+        value: 7
+      eight:
+        expected: 7
+        value: 8
+      nine:
+        expected: 9
+        value: 9
+      ten:
+        expected: 9
+        value: 10
+  collatz:
+    tests:
+      one:
+        expected: 1
+        value: 1
+      two:
+        expected: 2
+        value: 2
+      three:
+        expected: 8
+        value: 3
+      seven:
+        expected: 17
+        value: 7
+      eight:
+        expected: 4
+        value: 8
+      nine:
+        expected: 20
+        value: 9
+      ten:
+        expected: 7
+        value: 10
+        

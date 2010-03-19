@@ -49,7 +49,7 @@ end
 class ProjectTemplate
   def initialize(number)
     @number = number
-    @settings = YAML.load_file("#{number}.yml")      
+    @settings = YAML.load_file("#{number}/assertions.yml")      
   end
   
   def get_binding

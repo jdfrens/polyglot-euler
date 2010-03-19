@@ -14,4 +14,5 @@ def chmod_main
   File.chmod(0700, main_executable)
 end
 
+CLEAN.include('*.rbc')
 SRC = FileList['*.rb']
