@@ -15,6 +15,9 @@ def is_prime(i, primes):
                 lambda a, b: a or b, 
                 [i % p == 0 for p in primes], 
                 False)
+                
+def factorial(n):
+    return functools.reduce(lambda i, acc: i * acc, range(1, n+1))
 
 class Factors:
     def __init__(self, n):

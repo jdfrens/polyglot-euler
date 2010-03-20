@@ -40,6 +40,15 @@ class TriangleTests(unittest.TestCase):
         self.assertEqual(36, numbers.triangle_number(8))
         self.assertEqual(45, numbers.triangle_number(9))
         self.assertEqual(55, numbers.triangle_number(10))
+        
+class FactorialTests(unittest.TestCase):
+    
+    def test_factorial(self):
+        self.assertEqual(1, numbers.factorial(1))
+        self.assertEqual(2, numbers.factorial(2))
+        self.assertEqual(6, numbers.factorial(3))
+        self.assertEqual(120, numbers.factorial(5))
+        self.assertEqual(720, numbers.factorial(6))
 
 class ReversedIntegerTests(unittest.TestCase):
     
