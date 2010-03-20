@@ -1,4 +1,6 @@
-module Numbers (primes, primeFactors, factors, triangleNumber) where
+module Numbers (isEven, primes, primeFactors, factors, triangleNumber) where
+
+isEven n = n `mod` 2 == 0
 
 primes :: [Integer]
 primes = sieve [2..]

@@ -46,6 +46,16 @@ triangleNumberTests = TestList [
   TestCase (45 @=? triangleNumber 9),
   TestCase (55 @=? triangleNumber 10)
   ]
+  
+isEvenTests = TestList [
+  TestCase (True @=? isEven 2),
+  TestCase (True @=? isEven 4),
+  TestCase (True @=? (isEven $ negate 674)),
+  TestCase (True @=? isEven 888),
+  TestCase (False @=? isEven 3),
+  TestCase (False @=? (isEven $ negate 777)),
+  TestCase (False @=? isEven 451)
+  ]
 
 checkTests counts = case counts of
 	Counts _ _ errors failures ->
@@ -55,7 +65,7 @@ checkTests counts = case counts of
 
 main = do
   tests <- runTestTT (TestList [
-    listOfPrimesTests, primeFactorizationTests,
+    isEvenTests, listOfPrimesTests, primeFactorizationTests,
     factorsTests, triangleNumberTests
     ])
   checkTests tests
