@@ -32,8 +32,12 @@ Python
   Assertions:
     self.assertEqual(2, gpf(2))
     self.assertTrue(is_palindrome(9))
+  Access a Library:
+		import numbers
   Functions:
     range(n, m)       % range of integers
+    //                % for integer division (Python 3.1)
+		%                 % modulus
     
 Prolog
 ------
