@@ -32,4 +32,12 @@ describe Integer do
     9.triangle_number.should == 45
     10.triangle_number.should == 55
   end
+  
+  it "should have factorial" do
+    1.factorial.should == 1
+    2.factorial.should == 2
+    3.factorial.should == 6
+    5.factorial.should == 120
+    6.factorial.should == 720
+  end
 end

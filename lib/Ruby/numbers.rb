@@ -17,6 +17,14 @@ class Integer
   def triangle_number
     (1..self).to_a.inject(0) { |sum, n| sum + n }
   end
+  
+  def factorial
+    acc = 1
+    (1..self).each do |i|
+      acc *= i
+    end
+    acc
+  end
 end
 
 class PrimeGenerator
