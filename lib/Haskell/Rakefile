@@ -6,6 +6,11 @@ task :test do
   sh "NumbersTest"
 end
 
+desc "start ghci"
+task :ghci do
+  sh "ghci Numbers.hs"
+end
+
 SRC = FileList['*.hs']
 CLEAN.include('*.hi', '*.o')
 CLOBBER.include("NumbersTest")

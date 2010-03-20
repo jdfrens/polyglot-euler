@@ -1,4 +1,7 @@
-module Numbers (isEven, primes, primeFactors, factors, triangleNumber) where
+module Numbers (factorial, 
+                isEven,
+                primes, primeFactors, factors, 
+                triangleNumber) where
 
 isEven n = n `mod` 2 == 0
 
@@ -16,4 +19,6 @@ primeFactors n = go n primes
 
 factors n = filter (\i -> n `mod` i == 0) [1..n]
 
+factorial n = product [1..n]
+  
 triangleNumber n = sum [1..n]

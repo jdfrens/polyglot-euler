@@ -1,0 +1,32 @@
+problem:
+  function: sum_of_digits_of_factorial
+  value: 100
+functions:
+  sum_of_digits:
+    tests:
+      one:
+        expected: 1
+        value: 1
+      two_digits:
+        expected: 3
+        value: 12
+      two_digits_again:
+        expected: 14
+        value: 86
+      four_digits:
+        expected: 19
+        value: 1945
+  sum_of_digits_of_factorial:
+    tests:
+      one:
+        expected: 1
+        value: 1
+      three:
+        expected: 6
+        value: 3
+      five:
+        expected: 3
+        value: 5
+      six:
+        expected: 9
+        value: 6

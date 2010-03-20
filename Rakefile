@@ -18,7 +18,7 @@ task :create, :number do |task, args|
       if path =~ /\.svn/
         Find.prune
       else
-        Dir.mkdir("#{dest}")
+        FileUtils.mkdir_p("#{dest}")
         next
       end
     elsif path =~ /\.erb$/

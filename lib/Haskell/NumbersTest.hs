@@ -56,6 +56,14 @@ isEvenTests = TestList [
   TestCase (False @=? (isEven $ negate 777)),
   TestCase (False @=? isEven 451)
   ]
+  
+factorialTests = TestList [
+  TestCase (1 @=? factorial 1),
+  TestCase (2 @=? factorial 2),
+  TestCase (6 @=? factorial 3),
+  TestCase (120 @=? factorial 5),
+  TestCase (720 @=? factorial 6)
+  ]
 
 checkTests counts = case counts of
 	Counts _ _ errors failures ->
@@ -66,6 +74,6 @@ checkTests counts = case counts of
 main = do
   tests <- runTestTT (TestList [
     isEvenTests, listOfPrimesTests, primeFactorizationTests,
-    factorsTests, triangleNumberTests
+    factorsTests, factorialTests, triangleNumberTests
     ])
   checkTests tests
