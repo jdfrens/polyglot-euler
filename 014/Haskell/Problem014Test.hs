@@ -4,7 +4,9 @@ import Test.HUnit
 import System
 import Problem014
 
-collatzTests = TestList [
+collatzTests = TestList $ map makeCollatzTests listOfCollatz
+
+makeCollatzTests collatz = TestList [
   TestCase (1 @=? collatz 1),
   TestCase (2 @=? collatz 2),
   TestCase (8 @=? collatz 3),
@@ -16,10 +18,9 @@ collatzTests = TestList [
   ]
    
 maximumCollatzUnderTests = 
-  TestList $ map TestList 
-           $ map makeMaximumCollatzUnderTests listOfMaximumCollatzUnders
+  TestList $ map makeMaximumCollatzUnderTests listOfMaximumCollatzUnders
            
-makeMaximumCollatzUnderTests f = [
+makeMaximumCollatzUnderTests f = TestList [
   TestCase (1 @=? f 1),
   TestCase (2 @=? f 2),
   TestCase (3 @=? f 3),

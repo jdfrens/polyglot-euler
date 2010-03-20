@@ -1,15 +1,42 @@
 module Problem014 (collatz, maximumCollatzUnder,
-                   listOfMaximumCollatzUnders) where
+                   listOfCollatz, listOfMaximumCollatzUnders) where
   
 import Data.List
 import Numbers
 
-maximumCollatzUnder :: Integer -> Integer
-collatz n
-  | n == 1    = 1
-  | isEven n  = 1 + collatz (n `div` 2)
-  | otherwise = 1 + collatz (3 * n + 1)
+-- ****************************
+-- ****************************
+collatz :: Integer -> Integer
+collatz = collatzRec
 
+listOfCollatz = [collatz, collatzRec, collatzIter, collatzMemoized]
+
+collatzRec n
+  | n == 1    = 1
+  | isEven n  = 1 + collatzRec (n `div` 2)
+  | otherwise = 1 + collatzRec (3 * n + 1)
+
+collatzIter n = iter n 1
+  where iter n acc
+          | n == 1    = acc
+          | isEven n  = iter (n `div` 2) (acc+1)
+          | otherwise = iter (3 * n + 1) (acc+1)
+          
+-- computes correctly, but a LOT less efficent
+-- memoization done bad!
+collatzMemoized n
+  | n < limit = genericIndex memo (n-1)
+  | otherwise = iter n
+    where iter n
+            | n == 1      = 1
+            | isEven n    = 1 + collatzMemoized (n `div` 2)
+            | otherwise   = 1 + collatzMemoized (3 * n + 1)
+          memo = map iter [1..limit]
+          limit = 1000000
+
+-- ****************************
+-- ****************************
+maximumCollatzUnder :: Integer -> Integer
 maximumCollatzUnder = maximumCollatzUnder_with_foldl_and_maximum
 
 listOfMaximumCollatzUnders = 
