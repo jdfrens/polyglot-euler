@@ -3,3 +3,7 @@
     sh "ghc --make -i../../lib/Haskell #{executable}"
   end
 end
+
+task :ghci do
+  sh "ghci -i../../lib/Haskell"
+end
