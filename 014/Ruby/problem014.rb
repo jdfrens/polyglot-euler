@@ -25,12 +25,13 @@ class Integer
   def maximum_collatz_under
     index = -1
     max = -1
-    (1..self).to_a.map { |n| n.collatz }.each_with_index do |current, i|
-      if current > max
-        index, max = i, current
+    (1..self).each do |i|
+      collatzOfI = i.collatz
+      if collatzOfI > max
+        index, max = i, collatzOfI
       end
     end
-    index+1
+    index
   end
 
 end
