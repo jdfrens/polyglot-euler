@@ -2,7 +2,7 @@ require 'rake/clean'
 
 desc "Run the Haskell-lib tests"
 task :test do
-  sh "ghc --make NumbersTest"
+  sh "ghc --make -O2 NumbersTest"
   sh "NumbersTest"
 end
 
