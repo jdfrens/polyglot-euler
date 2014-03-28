@@ -1,0 +1,12 @@
+["..", "../../rake"].map { |d| $:.unshift File.join(File.dirname(__FILE__), d) }
+require 'rake/clean'
+require 'common_defs'
+require 'problem_defs'
+require 'clojure_defs'
+require 'clojure_tasks'
+
+task :test do
+  sh "lein test"
+end
+
+task :default => :test

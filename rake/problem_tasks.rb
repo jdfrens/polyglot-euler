@@ -1,9 +1,15 @@
 require 'pathname'
-  
+
+LANGUAGE_DIRECTORIES = ["Erlang", "Haskell", "Prolog", "Python", "Ruby", "Clojure"].map { |dir| Pathname.new(dir) }
+
 def dirs
-  ["Erlang", "Haskell", "Prolog", "Python", "Ruby"].select do |dir|
-    Pathname.new(dir).directory?
-  end
+  LANGUAGE_DIRECTORIES.select(&:directory?)
+end
+
+def puts_boxed(message)
+  puts "*" * message.length
+  puts message
+  puts "*" * message.length
 end
 
 task :default do
@@ -20,13 +26,9 @@ task :test do
     end
   end
   if failures.empty?
-    puts "***********************"
-    puts "All tests for all languages (#{dirs.join(", ")}) passed!"
-    puts "***********************"
+    puts_boxed "All tests for all languages (#{dirs.join(", ")}) passed!"
   else
-    puts "***********************"
-    puts "Test failures: #{failures.join(', ')}"
-    puts "***********************"
+    puts_boxed "Test failures: #{failures.join(', ')}"
     fail "Test failures."
   end
 end
@@ -51,4 +53,4 @@ def rake_in_dirs(task)
   dirs.each do |dir|
     sh "cd #{dir} ; rake #{task}"
   end
-end  
+end

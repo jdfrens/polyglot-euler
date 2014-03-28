@@ -1,0 +1,1 @@
+SRC = FileList['**/*.clj']
