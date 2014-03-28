@@ -1,4 +1,4 @@
-require "problem001"
+require_relative "problem001"
 
 describe Integer do
   it "should sum multiples of 3 and 5 up to 0" do

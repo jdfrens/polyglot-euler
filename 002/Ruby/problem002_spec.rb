@@ -1,7 +1,7 @@
-require "problem002"
+require_relative "problem002"
 
 describe Integer, "and even Fibonacci summation" do
-  
+
   it "should sum up to 0" do
     0.fib_sum.should == 0
   end
@@ -11,7 +11,7 @@ describe Integer, "and even Fibonacci summation" do
   end
 
   it "should sum up to 2" do
-    2.fib_sum.should == 2  
+    2.fib_sum.should == 2
   end
 
   it "should sum up to 33" do
@@ -46,6 +46,6 @@ describe Integer, "and Fibonacci list" do
 
   it "should list up to 34" do
   	34.fibs_upto.should == [34, 21, 13, 8, 5, 3, 2, 1]
-  end  
-  
+  end
+
 end

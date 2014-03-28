@@ -1,4 +1,4 @@
-require "problem003"
+require_relative "problem003"
 
 describe Integer do
   it "should have a greatest prime factor of 2" do

@@ -3,7 +3,7 @@ require 'erb'
 
 desc "Displays version numbers of stuff"
 task :versions do
-  sh "port installed erlang"
+  sh "erl +V"
   sh "ghc --version"
   sh "swipl --version"
   sh "python --version"
@@ -49,17 +49,17 @@ end
 class ProjectTemplate
   def initialize(number)
     @number = number
-    @settings = YAML.load_file("#{number}/assertions.yml")      
+    @settings = YAML.load_file("#{number}/assertions.yml")
   end
-  
+
   def get_binding
     binding
   end
-  
+
   def number
     @number
   end
-  
+
   def problem_function
     @settings["problem"]["function"]
   end
@@ -67,13 +67,13 @@ class ProjectTemplate
   def problem_value
     @settings["problem"]["value"]
   end
-  
+
   def tests(function)
     @settings["functions"][function]["tests"].map do |key, value|
       [value["expected"], value["value"]]
     end.sort { |a, b| a[1] <=> b[1] }
   end
-  
+
   def functions
     @settings["functions"].keys
   end

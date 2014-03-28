@@ -1,6 +1,6 @@
 require "test/unit"
 
-require "problem014"
+require_relative "problem014"
 
 class TestProblem014 < Test::Unit::TestCase
 
@@ -13,7 +13,7 @@ class TestProblem014 < Test::Unit::TestCase
     assert_equal 20, 9.collatz
     assert_equal 7, 10.collatz
   end
-  
+
   def test_maximum_collatz_under
     assert_equal 1, 1.maximum_collatz_under
     assert_equal 2, 2.maximum_collatz_under
@@ -24,5 +24,5 @@ class TestProblem014 < Test::Unit::TestCase
     assert_equal 9, 9.maximum_collatz_under
     assert_equal 9, 10.maximum_collatz_under
   end
-  
+
 end

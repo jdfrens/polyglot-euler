@@ -1,7 +1,6 @@
 -module(problem012_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(problem012).
 
 problem012_test_() -> [
   ?_assertEqual(1, problem012:problem012(1)),
@@ -12,4 +11,3 @@ problem012_test_() -> [
   ?_assertEqual(28, problem012:problem012(6)),
   ?_assert(true)
   ].
-

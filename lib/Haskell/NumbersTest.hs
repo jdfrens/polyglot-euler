@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 
 import Numbers
 
@@ -13,7 +13,7 @@ listOfPrimesTests = TestList [
   TestCase (assertEqual "primes less than 30"
             [2, 3, 5, 7, 11, 13, 17, 19, 23, 29] (takeWhile (<30) primes))
   ]
-  
+
 primeFactorizationTests = TestList [
   TestCase (assertEqual "prime factors of 2" [2] (primeFactors 2)),
   TestCase (assertEqual "prime factors of 3" [3] (primeFactors 3)),
@@ -36,7 +36,7 @@ factorsTests = TestList [
 
 triangleNumberTests = TestList [
   TestCase (1 @=? triangleNumber 1),
-  TestCase (3 @=? triangleNumber 2), 
+  TestCase (3 @=? triangleNumber 2),
   TestCase (6 @=? triangleNumber 3),
   TestCase (10 @=? triangleNumber 4),
   TestCase (15 @=? triangleNumber 5),
@@ -46,7 +46,7 @@ triangleNumberTests = TestList [
   TestCase (45 @=? triangleNumber 9),
   TestCase (55 @=? triangleNumber 10)
   ]
-  
+
 isEvenTests = TestList [
   TestCase (True @=? isEven 2),
   TestCase (True @=? isEven 4),
@@ -56,7 +56,7 @@ isEvenTests = TestList [
   TestCase (False @=? (isEven $ negate 777)),
   TestCase (False @=? isEven 451)
   ]
-  
+
 factorialTests = TestList [
   TestCase (1 @=? factorial 1),
   TestCase (2 @=? factorial 2),

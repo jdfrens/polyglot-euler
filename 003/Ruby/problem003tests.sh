@@ -1,4 +1,4 @@
 #!/bin/sh
 
 ruby problem003_test.rb
-spec problem003_spec.rb
+rspec problem003_spec.rb

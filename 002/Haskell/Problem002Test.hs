@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 import Problem002
 
 fibSum_tests = TestList [
@@ -32,7 +32,7 @@ checkTests counts = case counts of
 		if (errors + failures > 0)
 		then exitFailure
 		else (exitWith ExitSuccess)
-		
+
 tests = TestList [
 	TestLabel "testing fibSum" fibSum_tests,
 	TestLabel "testing takeFibs" takeFibs_tests,

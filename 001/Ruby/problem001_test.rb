@@ -1,6 +1,6 @@
 require "test/unit"
 
-require "problem001"
+require_relative "problem001"
 
 class TestProblem001 < Test::Unit::TestCase
   def test_sum35

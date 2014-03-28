@@ -1,7 +1,6 @@
 -module(problem008_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(problem008).
 
 largest_five_digit_product_test_() -> [
   ?_assertEqual(0, problem008:largest_five_digit_product(1234)),
@@ -13,4 +12,3 @@ largest_five_digit_product_test_() -> [
   ?_assertEqual(32, problem008:largest_five_digit_product(1111222221111113)),
   ?_assert(true)
   ].
-

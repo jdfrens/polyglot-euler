@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 import Problem008
 
 largestFiveDigitProductTests = TestList [
@@ -14,12 +14,12 @@ largestFiveDigitProductTests = TestList [
   TestCase (32 @=? largestFiveDigitProduct 1111222221111113),
   TestCase (1 @=? 1)
   ]
-  
+
 tests = TestList [
 	TestLabel "testing largestFiveDigitProduct" largestFiveDigitProductTests,
 	TestCase (1 @=? 1)
 	]
-	
+
 main = runTestTT tests >>= checkTests
   where
     checkTests counts = case counts of

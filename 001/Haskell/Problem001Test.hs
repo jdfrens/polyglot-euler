@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 import Problem001
 
 sum35_tests = TestList [

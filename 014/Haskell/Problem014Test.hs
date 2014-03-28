@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 import Problem014
 
 collatzTests = TestList $ map makeCollatzTests listOfCollatz
@@ -16,10 +16,10 @@ makeCollatzTests collatz = TestList [
   TestCase (7 @=? collatz 10),
   TestCase (1 @=? 1)
   ]
-   
-maximumCollatzUnderTests = 
+
+maximumCollatzUnderTests =
   TestList $ map makeMaximumCollatzUnderTests listOfMaximumCollatzUnders
-           
+
 makeMaximumCollatzUnderTests f = TestList [
   TestCase (1 @=? f 1),
   TestCase (2 @=? f 2),
@@ -30,13 +30,13 @@ makeMaximumCollatzUnderTests f = TestList [
   TestCase (9 @=? f 9),
   TestCase (9 @=? f 10)
   ]
-  
+
 tests = TestList [
 	TestLabel "testing collatz" collatzTests,
 	TestLabel "testing maximumCollatzUnder" maximumCollatzUnderTests,
 	TestCase (1 @=? 1)
 	]
-	
+
 main = runTestTT tests >>= checkTests
   where
     checkTests counts = case counts of

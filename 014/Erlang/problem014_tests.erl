@@ -1,7 +1,6 @@
 -module(problem014_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(problem014).
 
 collatz_test_() -> [
   ?_assertEqual(1, problem014:collatz(1)),
@@ -25,4 +24,3 @@ maximum_collatz_under_test_() -> [
   ?_assertEqual(9, problem014:maximum_collatz_under(10)),
   ?_assert(true)
   ].
-

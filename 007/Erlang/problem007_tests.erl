@@ -1,7 +1,6 @@
 -module(problem007_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(problem007).
 
 nth_prime_test_() -> [
   ?_assertEqual(2, problem007:nth_prime(1)),
@@ -12,4 +11,3 @@ nth_prime_test_() -> [
   ?_assertEqual(13, problem007:nth_prime(6)),
   ?_assert(true)
   ].
-

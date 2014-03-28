@@ -1,7 +1,6 @@
 -module(problem010_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(problem010).
 
 sum_of_primes_below_test_() -> [
   ?_assertEqual(0, problem010:sum_of_primes_below(1)),
@@ -12,4 +11,3 @@ sum_of_primes_below_test_() -> [
   ?_assertEqual(17, problem010:sum_of_primes_below(10)),
   ?_assert(true)
   ].
-

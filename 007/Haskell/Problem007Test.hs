@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 import Problem007
 
 nthPrimeTests = TestList [
@@ -13,12 +13,12 @@ nthPrimeTests = TestList [
   TestCase (13 @=? nthPrime 6),
   TestCase (1 @=? 1)
   ]
-  
+
 tests = TestList [
 	TestLabel "testing nthPrime" nthPrimeTests,
 	TestCase (1 @=? 1)
 	]
-	
+
 main = runTestTT tests >>= checkTests
   where
     checkTests counts = case counts of

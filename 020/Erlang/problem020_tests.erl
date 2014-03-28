@@ -1,7 +1,6 @@
 -module(problem020_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(problem020).
 
 sum_of_digits_of_factorial_test_() -> [
   ?_assertEqual(1, problem020:sum_of_digits_of_factorial(1)),
@@ -18,4 +17,3 @@ sum_of_digits_test_() -> [
   ?_assertEqual(19, problem020:sum_of_digits(1945)),
   ?_assert(true)
   ].
-

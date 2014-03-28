@@ -1,6 +1,6 @@
 require "test/unit"
 
-require "problem005"
+require_relative "problem005"
 
 class TestProblem005 < Test::Unit::TestCase
 

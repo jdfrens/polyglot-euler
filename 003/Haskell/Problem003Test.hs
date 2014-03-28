@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 import Problem003
 
 greatest_prime_factor_tests = TestList [

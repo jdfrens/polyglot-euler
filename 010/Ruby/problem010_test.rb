@@ -1,6 +1,6 @@
 require "test/unit"
 
-require "problem010"
+require_relative "problem010"
 
 class TestProblem010 < Test::Unit::TestCase
 
@@ -12,5 +12,5 @@ class TestProblem010 < Test::Unit::TestCase
     assert_equal 10, 5.sum_of_primes_below
     assert_equal 17, 10.sum_of_primes_below
   end
-  
+
 end

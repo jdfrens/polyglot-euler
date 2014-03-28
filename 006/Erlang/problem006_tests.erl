@@ -1,7 +1,6 @@
 -module(problem006_tests).
 
 -include_lib("eunit/include/eunit.hrl").
--import(problem006).
 
 diff_squares_sums_test_() -> [
   ?_assertEqual(0, problem006:diff_squares_sums(1)),
@@ -27,4 +26,3 @@ square_of_sum_test_() -> [
   ?_assertEqual(225, problem006:square_of_sum(5)),
   ?_assert(true)
   ].
-

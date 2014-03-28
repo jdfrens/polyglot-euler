@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 import Problem020
 
 sumOfDigitsOfFactorialTests = TestList [
@@ -11,7 +11,7 @@ sumOfDigitsOfFactorialTests = TestList [
   TestCase (9 @=? sumOfDigitsOfFactorial 6),
   TestCase (1 @=? 1)
   ]
-  
+
 sumOfDigitsTests = TestList [
   TestCase (1 @=? sumOfDigits 1),
   TestCase (3 @=? sumOfDigits 12),
@@ -19,13 +19,13 @@ sumOfDigitsTests = TestList [
   TestCase (19 @=? sumOfDigits 1945),
   TestCase (1 @=? 1)
   ]
-  
+
 tests = TestList [
 	TestLabel "testing sumOfDigitsOfFactorial" sumOfDigitsOfFactorialTests,
 	TestLabel "testing sumOfDigits" sumOfDigitsTests,
 	TestCase (1 @=? 1)
 	]
-	
+
 main = runTestTT tests >>= checkTests
   where
     checkTests counts = case counts of

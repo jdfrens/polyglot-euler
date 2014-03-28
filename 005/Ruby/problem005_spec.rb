@@ -1,4 +1,4 @@
-require "problem005"
+require_relative "problem005"
 
 describe Integer do
 

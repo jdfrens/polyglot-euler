@@ -1,6 +1,6 @@
 require "test/unit"
 
-require "problem002"
+require_relative "problem002"
 
 class TestProblem002 < Test::Unit::TestCase
 
@@ -19,6 +19,6 @@ class TestProblem002 < Test::Unit::TestCase
   	assert_equal([2, 1], 2.fibs_upto)
   	assert_equal([21, 13, 8, 5, 3, 2, 1], 33.fibs_upto)
   	assert_equal([34, 21, 13, 8, 5, 3, 2, 1], 34.fibs_upto)
-  end  
-  
+  end
+
 end

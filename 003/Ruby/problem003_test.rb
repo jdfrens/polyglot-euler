@@ -1,6 +1,6 @@
 require "test/unit"
 
-require "problem003"
+require_relative "problem003"
 
 class TestProblem003 < Test::Unit::TestCase
   def test_greatest_prime_factor

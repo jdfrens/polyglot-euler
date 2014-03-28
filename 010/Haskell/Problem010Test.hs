@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import System
+import System.Exit
 import Problem010
 
 sumOfPrimesBelowTests = TestList [
@@ -13,12 +13,12 @@ sumOfPrimesBelowTests = TestList [
   TestCase (17 @=? sumOfPrimesBelow 10),
   TestCase (1 @=? 1)
   ]
-  
+
 tests = TestList [
 	TestLabel "testing sumOfPrimesBelow" sumOfPrimesBelowTests,
 	TestCase (1 @=? 1)
 	]
-	
+
 main = runTestTT tests >>= checkTests
   where
     checkTests counts = case counts of

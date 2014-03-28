@@ -1,6 +1,6 @@
 require "test/unit"
 
-require "problem012"
+require_relative "problem012"
 
 class TestProblem012 < Test::Unit::TestCase
 
@@ -12,5 +12,5 @@ class TestProblem012 < Test::Unit::TestCase
     assert_equal 28, 5.problem012
     assert_equal 28, 6.problem012
   end
-  
+
 end
